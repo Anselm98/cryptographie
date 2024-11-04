@@ -1,0 +1,232 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #1a1a1a;
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Headers */
+h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+h3 {
+    color: #34495e;
+    margin: 1rem 0;
+    font-size: 1.4rem;
+}
+
+/* Upload form */
+.upload-section {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+form {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+input[type="file"] {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.5rem;
+    border: 2px dashed #cbd5e0;
+    border-radius: 6px;
+    background-color: white;
+}
+
+input[type="file"]:hover {
+    border-color: #4299e1;
+}
+
+button {
+    background-color: #4299e1;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #3182ce;
+}
+
+/* File list */
+.file-list {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #edf2f7;
+    transition: background-color 0.2s;
+}
+
+.file-item:last-child {
+    border-bottom: none;
+}
+
+.file-item:hover {
+    background-color: #f7fafc;
+}
+
+.file-name {
+    flex: 1;
+    margin-right: 1rem;
+}
+
+/* Download link */
+.download-link {
+    text-decoration: none;
+    color: #4299e1;
+    padding: 0.5rem 1rem;
+    border: 1px solid #4299e1;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.download-link:hover {
+    background-color: #4299e1;
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+    
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    button {
+        width: 100%;
+    }
+    
+    .file-item {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+    
+    .download-link {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.message {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+}
+
+.success {
+    background-color: #c6f6d5;
+    color: #2f855a;
+    border: 1px solid #9ae6b4;
+}
+
+.error {
+    background-color: #fed7d7;
+    color: #c53030;
+    border: 1px solid #fc8181;
+}
+
+.download-form {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.download-form input[type="password"] {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.download-form input[type="password"]:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 0.9rem;
+}
+
+select:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.file-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.file-recipient {
+    font-size: 0.8rem;
+    color: #666;
+}
